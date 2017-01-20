@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app">
+ 
+<head>
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js"></script> -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+  <script src="infinite-scroll.js"></script>
+  <script src="script.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.3/angular-route.js"></script>
+</head>
+ 
+<body>
+
+<p>Lorem Ipsum
+"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+"No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, simplemente porque es el dolor."
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue elementum ipsum id tincidunt. Sed efficitur mauris ac nunc semper, id placerat mauris fermentum. Etiam ullamcorper ipsum ex, ut pretium quam lacinia faucibus. Sed convallis dapibus lorem, vitae auctor ligula malesuada in. Fusce quis nibh ultricies, convallis tortor in, vestibulum risus. In tempus, lectus quis porttitor tempor, mi est sagittis ligula, vitae elementum ante massa in ante. Aenean condimentum pellentesque nisl ac efficitur. Sed ultrices nulla eu neque ultrices malesuada. Maecenas sollicitudin scelerisque nisl, sed varius nisl faucibus non. Nam eu lacus et sem euismod mollis commodo vel odio. Sed nec rutrum lectus.
+
+Etiam nec neque ipsum. Nullam ante justo, sodales eget tincidunt ac, congue et justo. Cras a quam varius sapien laoreet posuere. Integer blandit arcu sollicitudin, pulvinar velit eleifend, faucibus diam. Cras consequat vitae enim vitae vestibulum. Aliquam erat volutpat. Fusce iaculis nibh magna, scelerisque ullamcorper erat egestas quis. Nullam hendrerit egestas sodales. Mauris a volutpat mi. Ut felis nisl, vehicula euismod diam id, congue fringilla arcu. Sed fringilla ex in lorem vehicula, sit amet accumsan purus porta. Vivamus sit amet orci iaculis, ultrices sem vel, sodales lacus. In lacinia tellus eget elit tempus condimentum.
+
+Nullam venenatis tellus nisi, et dapibus arcu sagittis id. Ut neque enim, tincidunt in sem sed, fringilla pellentesque ante. Mauris nec feugiat ante. Fusce placerat vestibulum sem sed bibendum. Fusce congue molestie odio, eget scelerisque turpis condimentum eget. Nullam quis nulla nunc. Curabitur mollis felis id lacinia facilisis. Integer eros est, elementum sodales faucibus sit amet, laoreet quis diam. Fusce id maximus metus. Quisque vel varius eros. Sed vel placerat orci. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sed consectetur ipsum, eu aliquam diam. Duis ante diam, egestas eget molestie ut, accumsan quis justo.
+
+Morbi odio orci, volutpat nec dapibus et, convallis non urna. Donec consequat lacinia purus vitae accumsan. Donec vel nisi sodales mauris imperdiet venenatis vel in lacus. Vestibulum ipsum justo, convallis vel tincidunt sit amet, faucibus at quam. Vivamus feugiat fermentum tellus, eu interdum mi. Pellentesque eget elit in sem pharetra viverra quis sit amet mauris. Fusce eu lorem vel metus sagittis tincidunt. Etiam ac fermentum libero. Mauris ex orci, facilisis quis augue at, accumsan venenatis urna. Pellentesque vel pulvinar elit. Etiam velit tortor, maximus eget tincidunt quis, consectetur ut ex. Fusce accumsan commodo leo, nec efficitur nisi egestas nec.
+
+Nullam tincidunt dui quis nisi volutpat, vel porttitor orci imperdiet. Morbi ut turpis purus. Nam a lacus elit. Mauris id tristique neque, nec posuere quam. Proin mattis ultrices accumsan. Etiam tempor velit erat. Vestibulum bibendum pulvinar dui vitae ultricies.</p>
+
+<div ng-controller='controlador'>
+  <div infinite-scroll='article.nextPage()' infinite-scroll-disabled='article.busy' infinite-scroll-distance='1'>
+    <div ng-repeat='dato in article.items'>
+      <!-- {{dato}} -->
+      <h2 class='title'>{{dato.title}}</h2>
+      <span class='title'>
+        <p>{{dato.body}}</p>
+      </span>
+  </div>
+</div>
+  
+</body>
+ 
+</html>
