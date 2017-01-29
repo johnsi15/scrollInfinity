@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app">
+ 
+<head>
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="infinite-scroll.js"></script>
+  <script src="script.js"></script>
+  <style>
+    #contenido{
+      width: 800px;
+      margin: 0 auto;
+      height: 100vh;
+      padding: 25px;
+      box-sizing: border-box;
+      margin-bottom: 150px;
+    }
+  </style>
+</head>
+<body>
+  <section id="contenido">
+    
+    <div ng-controller='controlador'>
+      <div infinite-scroll='article.nextPage()' infinite-scroll-disabled='article.busy' infinite-scroll-distance='1'>
+        <div ng-repeat='dato in article.items'>
+          <!-- {{dato}} -->
+          <h2 class='title'>{{dato.title}}</h2>
+          <span class='title'>
+            <p>{{dato.body}}</p>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</body>
+ 
+</html>
