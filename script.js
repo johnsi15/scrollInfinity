@@ -1,4 +1,3 @@
-
 var app = angular.module('app', ['infinite-scroll']);
 
 app.controller('controlador', function ($scope, Article) {

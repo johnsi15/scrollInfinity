@@ -10,8 +10,10 @@ app.use('*', function(req, res, next) {
    next();
 });
 
+
 app.get('/api/notas/:page', function(req, res){
-  var dataJson = [{
+
+  const dataJson = [{
                   'title': 'Hola soy el titulo numero'+req.params.page,
                   'body': 'Hola soy el body numero'+req.params.page
                 }
