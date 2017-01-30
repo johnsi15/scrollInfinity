@@ -1,5 +1,4 @@
-
-var app = angular.module('app', ['infinite-scroll', 'ngSanitize']);
+var app = angular.module('app', ['infinite-scroll']);
 
 app.controller('controlador', function ($scope, Article) {
   $scope.article = new Article();
@@ -22,7 +21,7 @@ app.factory('Article', function ($http) {
     var url = 'http://localhost:3000/api/notas/'+this.page;
     
     $http.get(url).success(function(data){
-      console.log(data.length);
+      // console.log(data.length);
       // this.items.push(data);
       for (var i = 0; i < data.length; i++){
         this.items.push(data[i]);
