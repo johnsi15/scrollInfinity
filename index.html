@@ -26,11 +26,12 @@
     <div ng-controller='controlador'>
       <div infinite-scroll='article.nextPage()' infinite-scroll-disabled='article.busy' infinite-scroll-distance='1'>
         <div ng-repeat='dato in article.items'>
-          <!-- {{dato}} -->
-          <h2 class='title'>{{dato.title}}</h2>
-          <span class='title'>
-            <p>{{dato.body}}</p>
-          </span>
+            <!-- {{dato}} -->
+            <h2 class='title'>{{dato.title}}</h2>
+            <span class='title'>
+              <p>{{dato.body}}</p>
+            </span>
+        </div>
       </div>
     </div>
   </section>
